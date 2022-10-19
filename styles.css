@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-size: cover;
+    background-image: url('https://media3.giphy.com/media/1RwG47goIZNIY/giphy.gif?cid=ecf05e47bw0mo83axwy8j9mpc6u3k2ecmmoawyvkutq7qppm&rid=giphy.gif&ct=g');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+    
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+
+#expand {
+  display: flex;
+  position: relative;
+  display: inline-block;
+  transition: flex 0.7 ease-in;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: 1s anim-flipX ease infinite;
+  animation-delay: calc(.1s * var(--i));
+  font-family: "Raleway", sans-serif;
+  color: linear-gradient(
+    -225deg,
+    #fffffff6 0%,
+    #27e30e 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );;
+  
+}
+
+@keyframes anim-flipX {
+  0%,80% {
+    transform: rotateY(360deg);
+    transition: flex 0.7 ease-in;
+    animation-delay: calc(.1s * var(--i));
+  }}
+
+
+#jv {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: rgb(213, 8, 66);
+  animation: waviy 1s infinite;
+  animation: flip 2s infinite;
+  animation-delay: calc(.1s * var(--i));
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+.container {
+    display: flex;
+    width: 90vh;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-radius: 23px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    overflow: hidden;
+    margin: 10px;
+    justify-content: center;
+    background-size: cover;
+    transition: flex 0.7 ease-in;
+    position: relative;
+    width: 20px;
+}
+
+
+.panel h3 {
+position: absolute;
+font-size: 40px;
+bottom: 20px;
+left: 20px;
+margin: 0;
+opacity: 0;
+color: #ffff;
+transition: 5s;
+text-transform: capitalize;
+background-image: linear-gradient(
+  -225deg,
+  #fffffff6 0%,
+  #27e30e 29%,
+  #ff1361 67%,
+  #fff800 100%
+);
+animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i));
+background-size: auto auto;
+background-clip: border-box;
+background-size: 200% auto;
+color: #fff;
+background-clip: text;
+text-fill-color: transparent;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: textclip 5s linear infinite;
+display: inline-block;
+    font-size: 50px;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size: 80pt;
+    text-align: center;
+    user-select: none;
+    animation: stroke-offset 5.5s infinite linear;
+}
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+.panel.active{
+    flex: 5;
+    transition: 3s;
+}
+
+.panel.active h3{
+opacity: 1;
+}
